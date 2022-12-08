@@ -3,6 +3,7 @@ const btnClear = document.querySelector('button')
 const rangeInput =  document.querySelector('.range')
 const rangeOutValue = document.querySelector('.rangeOutValue')
 const inputColor = document.querySelector('.color')
+const cursorRounded = document.querySelector('.rounded');
 
 let brushSize = 20;
 
@@ -45,14 +46,18 @@ rangeOutValue.innerHTML = 'Brush size: ' + brushSize
 rangeInput.addEventListener('input', () => {
     brushSize = rangeInput.value
     rangeOutValue.innerHTML = 'Brush size: ' + brushSize
+
+    cursorRounded.style.width = brushSize + 'px'
+    cursorRounded.style.height = brushSize + 'px'
 })
 
 inputColor.addEventListener('input', () => {
     brushColor = inputColor.value
+    cursorRounded.style.background = inputColor.value
 })
 
 //BRUSH
-const cursorRounded = document.querySelector('.rounded');
+
 
 const moveCursor = (e)=> {
     const mouseY = e.clientY;
@@ -60,11 +65,11 @@ const moveCursor = (e)=> {
 
     cursorRounded.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
     cursorRounded.style.background = brushColor
-    cursorRounded.style.width = brushSize + 'px'
-    cursorRounded.style.height = brushSize + 'px'
+
 
 }
 canvas.addEventListener('mousemove', moveCursor)
+
 
 
 
