@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>WebPaint</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="cursor rounded"></div>
+	<div class="container">
+		<div class="cont-panel" >
+				<div class="controls">
+					<div>
+						<input type="color" class="color" id="color" name="color" value="#f6b73c">
+						<label for="color" ></label>
+						<p class="sel-color" align="center">Select color</p>
+					</div>
+					<button>Clear</button>
+					<div>
+						<input type="range" class="range" max="80" >
+						<p align="center" class="rangeOutValue">Brush size:  </p>
+					</div>
+				</div>
+		</div>
+
+		<div  class="canvas"></div>
+	</div>
+
+	<script src="./script.js"></script>
+</body>
+
+</html>
