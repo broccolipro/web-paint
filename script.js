@@ -58,7 +58,6 @@ inputColor.addEventListener('input', () => {
 
 //BRUSH
 
-
 const moveCursor = (e)=> {
     const mouseY = e.clientY;
     const mouseX = e.clientX;
